@@ -73,8 +73,6 @@ if (hora >=  6 && hora < 24) {
     digitalWrite(luz1, LOW);
     digitalWrite(luz2, HIGH);
     digitalWrite(luz3, HIGH);
-    lcd.setCursor(0,0);
-    lcd.print("luz OFF  ");
     Serial.println("Apagado");
   }
  
