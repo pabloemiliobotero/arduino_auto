@@ -5,7 +5,7 @@
 LiquidCrystal_I2C lcd(0x27,16,2); // inicializa la interfaz I2C del LCD 16x2
 RTC_DS1307 RTC;                   // inicializa el modulo RTC
 
-const int luz = 2;
+const int luz1 = 2;
 const int luz2 = 6;
 const int luz3 = 7; // Pin 7 encargado de activar el luz, se conecta al Rele
 int segundo;
@@ -13,7 +13,7 @@ int minuto;
 int hora;
 void setup () { 
   
- pinMode(luz, OUTPUT);                    // Configura como salida el pin 7
+ pinMode(luz1, OUTPUT);                    // Configura como salida el pin 7
  pinMode(luz2, OUTPUT);
  pinMode(luz3, OUTPUT);
  Wire.begin();                               
@@ -62,7 +62,7 @@ void loop(){
  hora=now.hour();
 
 if (hora >=  6 && hora < 24) {
-  digitalWrite(luz, HIGH);
+  digitalWrite(luz1, HIGH);
   digitalWrite(luz2, LOW);
   digitalWrite(luz3, LOW);
   lcd.setCursor(0,0);
@@ -70,7 +70,7 @@ if (hora >=  6 && hora < 24) {
   lcd.print("luz ON  ");
   Serial.println("luz Activo");
   }else{
-    digitalWrite(luz, LOW);
+    digitalWrite(luz1, LOW);
     digitalWrite(luz2, HIGH);
     digitalWrite(luz3, HIGH);
     lcd.setCursor(0,0);
