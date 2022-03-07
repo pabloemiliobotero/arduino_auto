@@ -20,5 +20,5 @@ void loop() {
   digitalWrite(RelayPin1, HIGH);
   digitalWrite(RelayPin2, HIGH);
   digitalWrite(RelayPin4, HIGH);
-  delay(3000);
+  delay(4000);
 }
