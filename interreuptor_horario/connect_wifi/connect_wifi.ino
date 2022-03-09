@@ -3,6 +3,8 @@
 // Replace with your network credentials (STATION)
 const char* ssid = "pablo";
 const char* password = "emilio063";
+// const char* ssid = "Casa Palermo";
+// const char* password = "Blackkush98";
 
 void initWiFi() {
   WiFi.mode(WIFI_STA);
